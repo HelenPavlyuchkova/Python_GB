@@ -4,18 +4,6 @@
     
 #     - Для N = 5: 1, -3, 9, -27, 81
 
-# не работает
-#  def f(x):
-#     x = 1
-#     for i in range(5):
-#         x *= -3
-#         return print(x)
-#     else:
-#         return # None
-# arg = 5 
-# print(f(arg))
-
-
 # def searchNumber(a: int, b: int) -> list:
 #     my_list = [1]
 #     i = 1
@@ -27,7 +15,6 @@
 # print(searchNumber(5,-3))
 
 
-# пересмотрела, исправила
 def func(x):
     result = 1
     for i in range(x):
@@ -53,14 +40,14 @@ func(n)
 
 # print(searchNumber(5,10, 123, 5432, 324, 76))
 
-def print_numbers(x=[]):
-    x.append(5)
-    print(x)
+# def print_numbers(x=[]):
+#     x.append(5)
+#     print(x)
 
-a = []
-print_numbers(x=a)
-print_numbers(x=a)
-print_numbers(x=a)
-print_numbers(x=a)
-print(f'---> {a}')
+# a = []
+# print_numbers(x=a)
+# print_numbers(x=a)
+# print_numbers(x=a)
+# print_numbers(x=a)
+# print(f'---> {a}')
 
