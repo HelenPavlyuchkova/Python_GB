@@ -20,7 +20,6 @@ res = sum(map(sumnum, number))
 print(res)
 
 
-
 # Задача №2. Реализуйте алгоритм перемешивания списка.
 
 import random
@@ -31,7 +30,6 @@ print(f'исходный список\n{array}')
 array_new = map(random.shuffle(array), array)
 print('полученный список')
 print(array)
-
 
 
 # Задача 3. Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка,
@@ -47,20 +45,24 @@ new_list = [list_num[i] for i in range(1, len(list_num), 2) if i % 2 != 0]
 print(sum(new_list))
 
 
+# # Задача №4. Задайте список из n чисел последовательности (1+1/n)^n и выведите на экран их сумму.
 
-# # Задача №4. Задайте последовательность чисел. Напишите программу, которая выведет список
-# # неповторяющихся элементов исходной последовательности.
-# # пример: [0, 4, 2, 5, 4, 5, 3, 5, 2] -> [0, 4, 2, 5, 3]
+def list_pos(n):
+    my_li = [((1 + 1/i)**i) for i in range(1, n + 1)]
+    new_list = dict(enumerate(my_li))
+    print(new_list)
+    return sum(my_li)
 
-# spisok = input('Задайте последовательность чисел через пробел: ').split(' ')
-# spisok = [int(x) for x in spisok]
-# spisok_new = [0]
-# for i in range(1,len(spisok)):
-#     for j in range(0, i):
-#         val = True
-#         if spisok[j] == spisok[i]:
-#             val = False
-#             break
-#     if val == True:
-#         spisok_new.append(spisok[i])
-# print(spisok, '->', spisok_new)
+print(list_pos(6))
+
+
+# Задача №5. Для натурального n создать словарь индекс-значение, состоящий из элементов последовательности 3n + 1.
+# Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
+
+n = int(input('Введите натуральное число n = '))
+
+def func(x):
+    return 3*x+1
+
+spisok = {i: func(i) for i in range(1, n+1)}
+print(spisok)
